@@ -1,8 +1,12 @@
+/*Disciplina: Estruturas de Dados
+  Autoras: Daniely Maximo Marcon e Giovanna Camila de O. Teodoro*/
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include"funcoesB.h"
 #define MAX 20
+
+
 
 // funcao que irá alocar memoria na arvore 
 arvore_b * aloca(int ordem){
@@ -35,19 +39,6 @@ void finalizar(arvore_b *ptr){
 	}
 }
 
-// funcao que irá imprimir chave e nivel da arvore
-void imprimir(arvore_b *ptr, int nivel){
-	if(ptr != NULL){
-		printf("Nível %d: ", nivel);
-		for(int i = 0; i < ptr->n; i++){
-			printf("%s ", ptr->chave[i]);
-		}
-		printf("\n");
-		for(int i = 0; i <= ptr->n; i++){
-			imprimir(ptr->filhos[i], nivel + 1);
-		}
-	}
-}
 
 
 /*funcao que verificar se encontra a chave indicada na arvoreB
